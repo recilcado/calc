@@ -1,0 +1,58 @@
+#include <iostream>
+
+using namespace std;
+
+
+double calc(double num1, double num2, char opp)
+{
+    if(opp == '+')
+    {
+        return num1+num2;
+    }
+    else if(opp == '-')
+    {
+        return num1-num2;
+    }
+    else if(opp == '*')
+    {
+        return num1*num2;
+    }
+    else if(opp == '/')
+    {
+        return num1/num2;
+    }
+}
+
+int main()
+{
+    double num1, num2, total = 0;
+    char opp, cont = 'y';
+
+
+    cout << "This is a calculator" << endl;
+    while(cont == 'Y' || cont =='y')
+    {
+
+
+        cout << "\n";
+        cout << "Enter your calculations"<<endl;
+        cout << "Enter your first number"<<endl;
+        cin >>num1;
+        cout << "Enter your operator(+,-,* or /)"<<endl;
+        cin >>opp;
+        cout << "Enter your second number"<<endl;
+        cin >>num2;
+
+        total = calc(num1, num2, opp);
+
+        cout << "answer:    "<<total<<endl;
+        cout << "Do you want to continue? y or n?\n";
+        cin >> cont;
+
+
+    }
+
+
+
+    return 0;
+}
